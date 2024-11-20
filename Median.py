@@ -8,14 +8,12 @@ class Median:
     def calculate(data):
         # This static method calculates the median of the provided dataset (data).
 
-        sorted_data = sorted(data)  # Sort the data in ascending order.
-        n = len(sorted_data)  # Get the number of elements in the sorted data.
-        mid = n // 2  # Find the index of the middle element (integer division).
+        sorted_data = sorted(data)
+        n = len(sorted_data)
+        mid = n // 2
 
         # If the number of elements is even, the median is the average of the two middle values.
         if n % 2 == 0:
-            # For even length data, take the two middle elements and calculate their average.
-            return (sorted_data[mid - 1] + sorted_data[mid]) / 2
+            return (sorted_data[mid - 1] + sorted_data[mid]) * 1.0 / 2
         else:
-            # For odd length data, return the middle element.
             return sorted_data[mid]
